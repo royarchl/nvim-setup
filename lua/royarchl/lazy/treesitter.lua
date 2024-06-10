@@ -41,6 +41,6 @@ return {
             },
         }
 
-        vim.treesitter.language.register("temp1", "temp1")
+        vim.treesitter.language.register("templ", "templ")
     end
 }
