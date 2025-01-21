@@ -14,10 +14,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -35,3 +35,15 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>sr", [[:s/<C-r><C-w>//g<Left><Left>]])
 vim.keymap.set("n", "<leader>srf", [[:%s/<C-r><C-w>//g<Left><Left>]])
+
+-- quick comments --
+vim.keymap.set("v", "<leader>c", [[:norm _i// <CR>]])
+vim.keymap.set("v", "<leader>uc", [[:norm _dw<CR>]])
+
+-- <CR> simulates pressing 'Enter'
+-- <cmd> specifies to nvim to execute the command
+
+vim.keymap.set("n", "<leader>wsh", [[:split<CR>]])
+vim.keymap.set("n", "<leader>wsv", [[:vsplit<CR>]])
+vim.keymap.set("n", "<leader>wn", "<C-w>w")
+vim.keymap.set("n", "<leader>wp", "<C-w>W")
